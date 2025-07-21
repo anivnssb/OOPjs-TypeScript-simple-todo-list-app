@@ -10,7 +10,7 @@ interface List {
 }
 
 export default class FullList implements List {
-  private static intstance: FullList = new FullList();
+  static intstance: FullList = new FullList();
   private constructor(private _list: ListItem[] = []) {}
 
   get list(): ListItem[] {

@@ -16,6 +16,7 @@ export default class ListTemplate implements DomList {
     this.ul.innerHTML = "";
   }
   render(fullList: FullList): void {
+    this.clear();
     fullList.list.forEach((item) => {
       const li = document.createElement("li");
       li.className = "item";
@@ -40,6 +41,7 @@ export default class ListTemplate implements DomList {
       li.append(button);
       button.addEventListener("click", () => {
         fullList.removeItem(item.id);
+        this.render(fullList);
       });
       this.ul.append(li);
     });
