@@ -11,12 +11,8 @@
 
   <body>
     <main>
-      <h1 class="offscreen">My List</h1>
-
       <section class="newItemEntry">
-        <h2 class="offscreen">New Item Entry</h2>
         <form class="newItemEntry__form" id="itemEntryForm">
-          <label for="newItem" class="offscreen">Enter a new to do item</label>
           <input
             class="newItemEntry__input"
             id="newItem"
@@ -49,23 +45,25 @@
           </button>
         </header>
         <hr />
-        <ul id="listItems">
-          <!-- <li class="item">
-                    <input type="checkbox" id="1">
-                    <label for="1">eat</label>
-                    <button class="button">X</button>
-                </li>
-                <li class="item">
-                    <input type="checkbox" id="2">
-                    <label for="2">sleep</label>
-                    <button class="button">X</button>
-                </li>
-                <li class="item">
-                    <input type="checkbox" id="3">
-                    <label for="3">code</label>
-                    <button class="button">X</button>
-                </li> -->
-        </ul>
+        <ul id="listItems" class="listItems"></ul>
+      </section>
+      <section class="createNewList">
+        <input
+          class="newItemEntry__input"
+          id="newItem"
+          type="text"
+          maxlength="40"
+          autocomplete="off"
+          placeholder="List name"
+        />
+        <button
+          id="addItem"
+          class="button newItemEntry__button"
+          title="Add new item"
+          aria-label="Add new item to list"
+        >
+          Save
+        </button>
       </section>
     </main>
   </body>
